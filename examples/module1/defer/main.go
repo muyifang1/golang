@@ -10,8 +10,8 @@ func main() {
 	defer fmt.Println("1")
 	defer fmt.Println("2")
 	defer fmt.Println("3")
-	loopFunc()
-	time.Sleep(time.Second)
+	//loopFunc()
+	time.Sleep(time.Second*3)
 }
 
 func loopFunc() {

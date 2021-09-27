@@ -25,6 +25,8 @@ func main() {
 	// 需要注意receive是struct还是指针
 	result := v1.Method(0).Call(nil)
 	fmt.Println("result:", result)
+	result = v1.Method(1).Call(nil)
+	fmt.Println("result:", result)
 }
 
 type T struct {
@@ -32,6 +34,10 @@ type T struct {
 }
 
 // 需要注意receive是struct还是指针
+func (t T) Print2() string{
+	return t.A + "2"
+}
+
 func (t T) String() string {
 	return t.A + "1"
 }
