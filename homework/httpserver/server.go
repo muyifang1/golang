@@ -116,6 +116,8 @@ func healthz(ctx *Context) {
 
 func (ctx *Context) TransferHeader() {
 	for headerKey, values := range ctx.R.Header {
+		// todo 有个疑问，这里使用 values[0] 有些奇怪，
+		// todo 我理解这个是一个切片 values[0]返回了整个切片，不知道理解是否正确
 		ctx.W.Header().Add(headerKey, values[0])
 	}
 	verFromOsEnv := os.Getenv("VERSION")
