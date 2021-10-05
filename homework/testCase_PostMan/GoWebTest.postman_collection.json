@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "e15151f7-fbdb-40b5-bdf3-27b2a88e9c3a",
+		"name": "GoWebTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"test@163.com\",\"password\":\"pwd123\",\"confirmed_password\":\"pwd456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/signup",
+				"description": "test"
+			},
+			"response": []
+		},
+		{
+			"name": "healthz",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"test@163.com\",\"password\":\"pwd123\",\"confirmed_password\":\"pwd456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/healthz",
+				"description": "test"
+			},
+			"response": []
+		}
+	]
+}

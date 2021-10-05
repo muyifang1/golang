@@ -13,4 +13,9 @@ func main() {
 	fmt.Printf("mySlice2 %+v\n", mySlice2)
 	fmt.Printf("mySlice3 %+v\n", mySlice3)
 	fmt.Printf("mySlice4 %+v\n", mySlice4)
+
+	//myStringSlice1 := make([]string, 0, 2)
+	myStringSlice1 := "test for string slice"
+	fmt.Println(myStringSlice1[1])
+	fmt.Printf("myStringSlice1 %s",myStringSlice1)
 }
