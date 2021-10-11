@@ -1,4 +1,4 @@
-package main
+package httpserver
 
 import (
 	"fmt"
@@ -100,7 +100,7 @@ type commonResponse struct {
 	Data    interface{} `json:"data"`
 }
 
-func healthz(ctx *Context) {
+func Healthz(ctx *Context) {
 	resp := &commonResponse{
 		Data: "this is test Server healthz!",
 	}
