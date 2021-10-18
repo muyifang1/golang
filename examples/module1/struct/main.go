@@ -1,16 +1,22 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"reflect"
 )
 
 type MyType struct {
-	Name string `json:"name,this is the name desc"`
-	Age string `json:"age,this is the age desc"`
+	Name string `json:"name"`
+	Address
 }
-
+type Address struct {
+	City string `json:"city"`
+}
 func main() {
-	mt := MyType{Name: "test"}
+	mt := MyType{Name: "test",Address: Address{City: "shanghai"}}
+	b, _ := json.Marshal(&mt)
+	fmt.Println(string(b))
 	myType := reflect.TypeOf(mt)
 	name := myType.Field(0)
 	age := myType.Field(1)
